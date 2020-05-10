@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 // return문에서 동일 코드를 여러번 사용하기 때문에
 // 컴포넌트를 하나 더 만들어서 개선.
@@ -14,45 +14,44 @@ function User({ user }) {
 
 function UserList() {
   const users = [
-    { id: 1, username: 'velopert', email: 'public.velopert@gmail.com' },
-    { id: 2, username: 'tester', email: 'tester@example.com' },
-    { id: 3, username: 'liz', email: 'liz@example.com' },
+    { id: 1, username: "velopert", email: "public.velopert@gmail.com" },
+    { id: 2, username: "tester", email: "tester@example.com" },
+    { id: 3, username: "liz", email: "liz@example.com" },
   ];
 
   return (
-    // EXAMPLE: 방법1
-    // 원래 동일코드를 이렇게 여러번 반복해서 사용했으나
-    // User 컴포넌트를 하나 더 만들었기 때문에 더 간략하게 사용.
-    // <div>
-    //   <div>
-    //     <b>{users[0].username}</b>
-    //     <span>{users[0].email}</span>
-    //   </div>
-    //   <div>
-    //     <b>{users[1].username}</b>
-    //     <span>{users[1].email}</span>
-    //   </div>
-    //   <div>
-    //     <b>{users[2].username}</b>
-    //     <span>{users[2].email}</span>
-    //   </div>
-    // </div>
-
-    // EXAMPLE: 방법2: 이 방법은 배열의 내용이 고정적일 때 사용 가능.
-    // <div>
-    //   <User user={users[0]} />
-    //   <User user={users[1]} />
-    //   <User user={users[2]} />
-    // </div>
-
-    //EXAMPLE: 방법3: 배열이 내용이 고정적이지 않고 바뀌는 경우 map 사용.
+    //EXAMPLE: 방법1: 배열이 내용이 고정적이지 않고 바뀌는 경우 map 사용.
 
     <div>
-      {users.map(user => (
+      {users.map((user) => (
         <User user={user} key={user.id} />
       ))}
     </div>
   );
+  // EXAMPLE: 방법2
+  // <div>
+  //   <div>
+  //     <b>{users[0].username}</b>
+  //     <span>{users[0].email}</span>
+  //   </div>
+  //   <div>
+  //     <b>{users[1].username}</b>
+  //     <span>{users[1].email}</span>
+  //   </div>
+  //   <div>
+  //     <b>{users[2].username}</b>
+  //     <span>{users[2].email}</span>
+  //   </div>
+  // </div>
+
+  // EXAMPLE: 방법3: 이 방법은 배열의 내용이 고정적일 때 사용 가능.
+  // 방법2에서 동일코드를 이렇게 여러번 반복해서 사용했으나
+  // User 컴포넌트를 하나 더 만들었기 때문에 더 간략하게 사용.
+  // <div>
+  //   <User user={users[0]} />
+  //   <User user={users[1]} />
+  //   <User user={users[2]} />
+  // </div>
 }
 
 // NOTE:

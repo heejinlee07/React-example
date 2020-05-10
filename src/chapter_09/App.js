@@ -1,16 +1,16 @@
-import React, { useRef, useState } from 'react';
-import UseRefVariable from './UseRefVariable';
-import CreateUser from './CreateUser';
+import React, { useRef, useState } from "react";
+import UseRefVariable from "./UseRefVariable";
+import CreateUser from "./CreateUser";
 
 function App() {
   const [inputs, setInputs] = useState({
-    username: '',
-    email: '',
+    username: "",
+    email: "",
   });
 
   const { username, email } = inputs;
 
-  const onChange = e => {
+  const onChange = (e) => {
     const { name, value } = e.target;
     setInputs({
       ...inputs,
@@ -18,9 +18,9 @@ function App() {
     });
   };
   const [users, setUsers] = useState([
-    { id: 1, username: 'velopert', email: 'public.velopert@gmail.com' },
-    { id: 2, username: 'tester', email: 'tester@example.com' },
-    { id: 3, username: 'liz', email: 'liz@example.com' },
+    { id: 1, username: "velopert", email: "public.velopert@gmail.com" },
+    { id: 2, username: "tester", email: "tester@example.com" },
+    { id: 3, username: "liz", email: "liz@example.com" },
   ]);
 
   const nextId = useRef(4);
@@ -48,8 +48,8 @@ function App() {
     //기존의 배열을 복사해서 이 자리에 넣은 다음에 user를 넣으면 새 항목이 추가되는 것.
     //setUsers(users.concat(user)) 이 방법을 사용해도 된다.
     setInputs({
-      username: '',
-      email: '',
+      username: "",
+      email: "",
     });
     nextId.current += 1; //이 함수가 실행될 때마다 nextId.current를 사용하고 1증가한다.
   };
