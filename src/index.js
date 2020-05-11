@@ -16,17 +16,17 @@ import App from "./practice/App";
 import CreateUser from "./chapter_09/App";
 import UseEffect from "./chapter_12/App";
 import UseMemo from "./chapter_13/App";
+import ReactMemo from "./chapter_15/App";
 import UseCallback from "./chapter_14/App";
 */
-import ReactMemo from "./chapter_15/App";
-
+import FruitsList from "./practice/App";
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <App2 /> */}
     {/* <App3 /> */}
     {/* <App4 /> */}
-    {/* <FruitsList /> */}
+    <FruitsList />
     {/* <Counter/> */}
     {/* <InputSample> */}
     {/* <InputMultiple /> */}
@@ -39,7 +39,7 @@ ReactDOM.render(
     {/* <UseEffect /> */}
     {/* <UseMemo /> */}
     {/* <UseCallback /> */}
-    <ReactMemo />
+    {/* <ReactMemo /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
