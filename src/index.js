@@ -14,19 +14,20 @@ import UserListDel from './chapter_10/App';
 import UserListEdit from './chapter_11/App';
 import App from "./practice/App";
 import CreateUser from "./chapter_09/App";
-import UseEffect from "./chapter_12/App";
-import UseMemo from "./chapter_13/App";
 import ReactMemo from "./chapter_15/App";
-import UseCallback from "./chapter_14/App";
+import FruitsList from "./practice_01/App";
+import TodoList from "./practice_02/App";
+import UseEffect from "./chapter_12/App";
 */
-import FruitsList from "./practice/App";
+import UseCallback from "./chapter_14/App";
+// import UseMemo from "./chapter_13/App";
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <App2 /> */}
     {/* <App3 /> */}
     {/* <App4 /> */}
-    <FruitsList />
+    {/* <FruitsList /> */}
     {/* <Counter/> */}
     {/* <InputSample> */}
     {/* <InputMultiple /> */}
@@ -38,8 +39,9 @@ ReactDOM.render(
     {/* <App /> */}
     {/* <UseEffect /> */}
     {/* <UseMemo /> */}
-    {/* <UseCallback /> */}
+    <UseCallback />
     {/* <ReactMemo /> */}
+    {/* <TodoList /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,8 +1,16 @@
 /**
  * NOTE:
- * useCallback: useMemo 는 특정 결과값을 재사용 할 때 사용하는 반면, useCallback 은 특정 함수를 새로 만들지 않고 재사용하고 싶을 때 사용
+ * useCallback: useMemo 는 특정 결과값을 재사용 할 때 사용하는 반면,
+ * useCallback 은 특정 함수를 새로 만들지 않고 재사용하고 싶을 때 사용
  * 컴포넌트에서 props 가 바뀌지 않았으면 Virtual DOM 에 새로 렌더링하는 것 조차 하지 않고
  * 컴포넌트의 결과물을 재사용 하는 최적화 작업을 할 때 함수를 재사용하는것이 필수
+ */
+
+/**
+ * 즉, 이 useMemo는 상태가 변경되면 리렌더링 된다 라는
+ * 컨셉에서 최적화를 생각한 함수이고
+ * 상태가 변경되어 리렌더링 되더라도,
+ * 필요할 때만 원하는 로직을 실행시키자는 고민에서 태어남.
  */
 
 import React, { useRef, useState, useMemo, useCallback } from "react";
@@ -77,6 +85,13 @@ function App() {
     },
     [users]
   );
+  /**
+   * WHY:
+   * deps에 users가 있으니 users 배열이 바뀔때마다 onCreate 도 새로 만들어지고,
+   * onToggle,onRemove 도 새로 만들어져서 리렌더링 됨.
+   * useState의 함수형 업데이트를 하면 deps에 users를 안넣어도 된다.
+   * 콜백함수에서 최신 users를 조회하기 때문에 deps에 안 넣어도 됨.
+   */
 
   //이 함수는 [users]의 값이 바뀔 때에만 호출됨. 그렇지 않으면 이전의 값을 재사용한다.
   const count = useMemo(() => countActiveUsers(users), [users]);

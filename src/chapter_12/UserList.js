@@ -45,6 +45,8 @@ function User({ user, onRemove, onToggle }) {
       console.log(user);
     };
   }, [user]);
+  //[관리 할 상태] : [] 자리에 관리 할 상태를 넣어야 하기 때문에
+  //상태 정의 아래에 ex.(useState)가 정의 된 아래에 useEffect를 구현해야 한다.
 
   /**
    * REMIND:

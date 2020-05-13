@@ -68,7 +68,8 @@ function App() {
     setUsers(users.map((user) => (user.id === id ? { ...user, active: !user.active } : user)));
   };
 
-  //이 함수는 [users]의 값이 바뀔 때에만 호출됨. 그렇지 않으면 이전의 값을 재사용한다.
+  //이 함수는 [users]의 값이 바뀔 때에만 호출됨. 그렇지 않으면 이전의 값을 재사용한다
+  // 첫 번째 파라미터에 함수를 넣고, 두 번째 파라미터에 변경됨을 감지할 상태(데이터)를 넣음.
   const count = useMemo(() => countActiveUsers(users), [users]);
 
   return (

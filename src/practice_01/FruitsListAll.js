@@ -1,7 +1,7 @@
 import React from "react";
 
-function Fruits({ fruits, onRemove, onToggle }) {
-  const { fruitsname, price, id, active } = fruits;
+function Fruits({ fruit, onRemove, onToggle }) {
+  const { fruitsname, price, id, active } = fruit;
   return (
     <div>
       <b style={{ color: active ? "pink" : "black", cursor: "pointer" }} onClick={() => onToggle(id)}>
@@ -18,7 +18,7 @@ function FruitsListAll({ fruitslist, onRemove, onToggle }) {
   return (
     <div>
       {fruitslist.map((fruit) => (
-        <Fruits fruits={fruit} key={fruit.id} onRemove={onRemove} onToggle={onToggle} />
+        <Fruits fruit={fruit} key={fruit.id} onRemove={onRemove} onToggle={onToggle} />
       ))}
     </div>
   );
