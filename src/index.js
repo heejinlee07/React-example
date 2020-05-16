@@ -17,11 +17,12 @@ import CreateUser from "./chapter_09/App";
 import ReactMemo from "./chapter_15/App";
 import FruitsList from "./practice_01/App";
 import TodoList from "./practice_02/App";
-import UseEffect from "./chapter_12/App";
 import UseCallback from "./chapter_14/App";
 import UseMemo from "./chapter_13/App";
-*/
 import UseReducer from "./chapter_16/App";
+import ReducePractice from "./practice_03/Book";
+*/
+import UseEffect from "./chapter_12/App";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -39,12 +40,13 @@ ReactDOM.render(
     {/* <UserListDel /> */}
     {/* <UserListEdit /> */}
     {/* <App /> */}
-    {/* <UseEffect /> */}
+    <UseEffect />
     {/* <UseMemo /> */}
     {/* <UseCallback /> */}
     {/* <ReactMemo /> */}
     {/* <TodoList /> */}
-    <UseReducer />
+    {/* <UseReducer /> */}
+    {/* <ReducePractice /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

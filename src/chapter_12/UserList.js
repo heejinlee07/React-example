@@ -13,14 +13,14 @@ import React, { useEffect } from "react";
  */
 function User({ user, onRemove, onToggle }) {
   const { username, email, id, active } = user;
-  useEffect(() => {
-    console.log("컴포넌트가 화면에 나타남");
-    // useEffect의 함수가 호출된 시점은 UI가 화면에 나타난 상태 이후니 여기서 DOM에 직접 접근 가능
-    // cleanup함수. 컴포넌트가 사라질 때 함수를 return한다.
-    return () => {
-      console.log("컴포넌트가 화면에서 사라짐");
-    };
-  }, []);
+  // useEffect(() => {
+  //   console.log("컴포넌트가 화면에 나타남");
+  //   // useEffect의 함수가 호출된 시점은 UI가 화면에 나타난 상태 이후니 여기서 DOM에 직접 접근 가능
+  //   // cleanup함수. 컴포넌트가 사라질 때 함수를 return한다.
+  //   return () => {
+  //     console.log("컴포넌트가 화면에서 사라짐");
+  //   };
+  // }, []);
 
   /**
    * NOTE:
@@ -36,15 +36,15 @@ function User({ user, onRemove, onToggle }) {
    */
 
   //배열 안에 값이 있을 때, 배열안의 값이 설정되거나 바뀔 때마다(업데이트 된 직후) useEffect에서 등록한 함수가 호출된다.
-  useEffect(() => {
-    console.log("user 값이 설정됨");
-    console.log(user);
-    //cleanup함수. [user]에 있는 값이 바뀌기 직전에 호출됨.
-    return () => {
-      console.log("user 값이 바뀌기 전");
-      console.log(user);
-    };
-  }, [user]);
+  // useEffect(() => {
+  //   console.log("user 값이 설정됨");
+  //   console.log(user);
+  //   //cleanup함수. [user]에 있는 값이 바뀌기 직전에 호출됨.
+  //   return () => {
+  //     console.log("user 값이 바뀌기 전");
+  //     console.log(user);
+  //   };
+  // }, [user]);
   //[관리 할 상태] : [] 자리에 관리 할 상태를 넣어야 하기 때문에
   //상태 정의 아래에 ex.(useState)가 정의 된 아래에 useEffect를 구현해야 한다.
 
@@ -61,6 +61,8 @@ function User({ user, onRemove, onToggle }) {
    * 부모컴포넌트가 리렌더링되면 자식 컴포넌트 또한 리렌더링되기 때문.
    * 실제 DOM에 반영되는 것은 바뀐 내용이 있는 컴포넌트지만 Virtual DOM에서는 다 렌더링한다.
    */
+
+  //deps를 생략하면 업데이트시에도 매번 useEffect에 등록한 함수가 호출됨.
   useEffect(() => {
     console.log(user);
   });
