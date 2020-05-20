@@ -21,8 +21,10 @@ import UseCallback from "./chapter_14/App";
 import UseMemo from "./chapter_13/App";
 import UseReducer from "./chapter_16/App";
 import ReducePractice from "./practice_03/Book";
-*/
 import UseEffect from "./chapter_12/App";
+import ContextSample from "./ContextSample";
+*/
+import CustomHook from "./chapter_17/App";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -40,13 +42,15 @@ ReactDOM.render(
     {/* <UserListDel /> */}
     {/* <UserListEdit /> */}
     {/* <App /> */}
-    <UseEffect />
+    {/* <UseEffect /> */}
     {/* <UseMemo /> */}
     {/* <UseCallback /> */}
     {/* <ReactMemo /> */}
     {/* <TodoList /> */}
     {/* <UseReducer /> */}
     {/* <ReducePractice /> */}
+    <CustomHook />
+    {/* <ContextSample /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
