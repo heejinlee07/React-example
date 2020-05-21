@@ -23,8 +23,9 @@ import UseReducer from "./chapter_16/App";
 import ReducePractice from "./practice_03/Book";
 import UseEffect from "./chapter_12/App";
 import ContextSample from "./ContextSample";
-*/
 import CustomHook from "./chapter_17/App";
+*/
+import Api from "./chapter_18_api/App";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -49,8 +50,9 @@ ReactDOM.render(
     {/* <TodoList /> */}
     {/* <UseReducer /> */}
     {/* <ReducePractice /> */}
-    <CustomHook />
+    {/* <CustomHook /> */}
     {/* <ContextSample /> */}
+    <Api />
   </React.StrictMode>,
   document.getElementById("root")
 );
